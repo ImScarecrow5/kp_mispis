@@ -1,0 +1,39 @@
+{
+  "Clients": [
+    {"Id":1,"FullName":"Иванов Сергей Петрович","Phone":"+7 900 111-22-33","Email":"ivanov@example.ru","Address":"г. Воронеж, ул. Ленина, 10"},
+    {"Id":2,"FullName":"Петрова Анна Викторовна","Phone":"+7 900 555-66-77","Email":"petrova@example.ru","Address":"г. Воронеж, Московский проспект, 41"}
+  ],
+  "Suppliers": [
+    {"Id":1,"Name":"Пластик-Комплект","ContactPerson":"Орлов Д. С.","Phone":"+7 473 100-10-10","Email":"plastic@example.ru"},
+    {"Id":2,"Name":"Электроника-Сервис","ContactPerson":"Кузнецова М. А.","Phone":"+7 473 200-20-20","Email":"electro@example.ru"}
+  ],
+  "Materials": [
+    {"Id":1,"Name":"PLA-пластик","Unit":"кг","Quantity":25,"MinQuantity":5,"SupplierId":1},
+    {"Id":2,"Name":"Алюминиевый профиль","Unit":"м","Quantity":60,"MinQuantity":10,"SupplierId":1},
+    {"Id":3,"Name":"Плата управления","Unit":"шт.","Quantity":15,"MinQuantity":3,"SupplierId":2},
+    {"Id":4,"Name":"Датчик температуры","Unit":"шт.","Quantity":30,"MinQuantity":5,"SupplierId":2}
+  ],
+  "Orders": [
+    {"Id":1,"ClientId":1,"PrinterModel":"FDM Home Mini","Quantity":1,"Status":"Производство","Amount":34900,"CreatedAt":"2026-06-02T05:45:42.1801717+03:00","MaterialsConsumed":false},
+    {"Id":2,"ClientId":2,"PrinterModel":"FDM Home Pro","Quantity":1,"Status":"Проектирование","Amount":49900,"CreatedAt":"2026-06-02T05:45:42.1816818+03:00","MaterialsConsumed":false}
+  ],
+  "Designs": [
+    {"Id":1,"OrderId":1,"DrawingName":"Чертеж корпуса FDM Home Mini","Specification":"Корпус, направляющие, стол печати, электроника","EngineerName":"Смирнов И. А.","DesignStatus":"Пройдено","CreatedAt":"2026-06-02T05:45:42.1816818+03:00"}
+  ],
+  "ProductionTasks": [
+    {"Id":1,"OrderId":1,"OperationName":"Сборка каркаса","ExecutorName":"Михайлов П. Р.","Status":"В работе","StartedAt":"2026-06-02T05:45:42.1816818+03:00","FinishedAt":null},
+    {"Id":2,"OrderId":1,"OperationName":"Производство пластиковых элементов","ExecutorName":"Производственный участок","Status":"Завершено","StartedAt":"2026-06-02T06:05:43.7506271+03:00","FinishedAt":"2026-06-02T06:05:52.4718362+03:00"},
+    {"Id":3,"OrderId":1,"OperationName":"Производство металлических элементов","ExecutorName":"Производственный участок","Status":"Запланировано","StartedAt":"2026-06-02T06:05:43.7506271+03:00","FinishedAt":null},
+    {"Id":4,"OrderId":1,"OperationName":"Производство электронных деталей","ExecutorName":"Производственный участок","Status":"Запланировано","StartedAt":"2026-06-02T06:05:43.7506271+03:00","FinishedAt":null},
+    {"Id":5,"OrderId":1,"OperationName":"Сборка принтера","ExecutorName":"Производственный участок","Status":"Завершено","StartedAt":"2026-06-02T06:05:43.7506271+03:00","FinishedAt":"2026-06-02T06:05:57.7800851+03:00"},
+    {"Id":6,"OrderId":1,"OperationName":"Калибровка продукта","ExecutorName":"Производственный участок","Status":"Завершено","StartedAt":"2026-06-02T06:05:43.7506271+03:00","FinishedAt":"2026-06-02T06:05:56.4799425+03:00"}
+  ],
+  "TestProtocols": [
+    {"Id":1,"OrderId":1,"TesterName":"Соколов В. Н.","Result":"Пройдено","Comment":"Точность печати соответствует требованиям","CheckedAt":"2026-06-02T05:45:42.1816818+03:00"}
+  ],
+  "PackagePayments": [
+    {"Id":1,"OrderId":1,"PackagerName":"Климова Е. С.","DeliveryCode":"TK-000123","Paid":true,"ClosedAt":"2026-06-02T05:45:42.1816818+03:00"}
+  ],
+  "TransportRequests": [
+  ]
+}
